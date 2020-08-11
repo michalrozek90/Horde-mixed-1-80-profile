@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EasyQuestProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <QuestsSorted>
+  <!-- PAMIĘTAJ O ZAKOMENTOWANIU PRZED DOKONANIEM ZMIAN  -->
     <QuestsSorted Action="RunCode" NameClass="AutoUpdater.CheckUpdate();&#xD;&#xA;            Thread.Sleep(500);" />
     <QuestsSorted Action="RunCode" NameClass="SettingsWow.Settings();" />
-    <QuestsSorted Action="RunLuaCode" NameClass="DEFAULT_CHAT_FRAME:AddMessage(&quot;Welcome to the newest version of the Wholesome Leveling Experience. 1-80 grinding profile started.&quot;)" />
+    <QuestsSorted Action="RunLuaCode" NameClass="DEFAULT_CHAT_FRAME:AddMessage(&quot;Welcome to the Wholesome Leveling Experience. 1-80 grinding profile started.&quot;)" />
     <QuestsSorted Action="If" NameClass="ObjectManager.Me.Level &gt;=1 &amp;&amp; ObjectManager.Me.Level &lt; 20" />
     <QuestsSorted Action="If" NameClass="ObjectManager.Me.Level &gt;=1 &amp;&amp; ObjectManager.Me.Level &lt; 8" />
     <QuestsSorted Action="If" NameClass="ObjectManager.Me.PlayerRace == PlayerFactions.Orc || ObjectManager.Me.PlayerRace == PlayerFactions.Troll &amp;&amp; ObjectManager.Me.Level &lt; 3" />
