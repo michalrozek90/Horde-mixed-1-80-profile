@@ -6357,8 +6357,8 @@ public class AutoUpdater
         {
             string onlineFile = "https://raw.githubusercontent.com/michalrozek90/Horde-mixed-1-80-profile/master/Horde%20mixed%201-80.xml";
 
-            string currentFile = Others.GetCurrentDirectory + @"\Profiles\Quester" + wManager.Wow.Helpers.Quest.QuesterCurrentContext.ProfileName;
-            robotManager.Helpful.Logging.Write("Current profile (version 1.0.0) is " + currentFile, (Logging.LogType)1, System.Drawing.Color.Blue);
+            string currentFile = Others.GetCurrentDirectory + @"\Profiles\Quester\" + wManager.Wow.Helpers.Quest.QuesterCurrentContext.ProfileName;
+            robotManager.Helpful.Logging.Write("Current profile version is 1.0.0 ", (Logging.LogType)1, System.Drawing.Color.Blue);
             var currentFileContent = System.IO.File.ReadAllText(currentFile, System.Text.Encoding.UTF8);
             var onlineFileContent = new System.Net.WebClient { Encoding = System.Text.Encoding.UTF8 }.DownloadString(onlineFile);
 
