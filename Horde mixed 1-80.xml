@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <EasyQuestProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <QuestsSorted>
- bbbbbbbbbbbbbb
+ccccccccccccc
     <QuestsSorted Action="RunCode" NameClass="AutoUpdater.CheckUpdate();&#xD;&#xA;            Thread.Sleep(500);" />
     <QuestsSorted Action="RunCode" NameClass="SettingsWow.Settings();" />
     <QuestsSorted Action="RunLuaCode" NameClass="DEFAULT_CHAT_FRAME:AddMessage(&quot;Welcome to the Wholesome Leveling Experience. 1-80 grinding profile started.&quot;)" />
