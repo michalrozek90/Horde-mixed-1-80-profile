@@ -6370,7 +6370,7 @@ public class AutoUpdater
                     System.IO.File.WriteAllText(currentFile, onlineFileContent); // replace user file by online file
                     new System.Threading.Thread(() =&gt; robotManager.Products.Products.ProductRestart()).Start(); // reload product (profile)
                 }
-                Logging.Write("[Auto Updater]The version on your pc is the latest updated version.", (Logging.LogType)1, System.Drawing.Color.Blue);
+                robotManager.Helpful.Logging.Write("[Auto Updater]The version on your pc is the latest updated version.", (Logging.LogType)1, System.Drawing.Color.Blue);
             }
 
         }
