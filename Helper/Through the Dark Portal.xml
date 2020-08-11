@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EasyQuestProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <QuestsSorted>
+    <QuestsSorted Action="StepName" NameClass="Start" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[GrinderSuite]\124h\124r: \124cff00ccff\124hThrough the Dark Portal!\124h\124r&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int)ContinentId.Kalimdor &amp;&amp; Usefuls.MapZoneName != (&quot;Blasted Lands&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="var position = new Vector3(1472.55f, -4215.7f, 59.221f);&#xD;&#xA;int objEntryId = 195142;&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(position, objEntryId))&#xD;&#xA;{&#xD;&#xA;    System.Threading.Thread.Sleep(1500);&#xD;&#xA;}" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int)ContinentId.Azeroth &amp;&amp; Usefuls.MapZoneName != (&quot;Blasted Lands&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="var position = new Vector3(1768.77, 55.3697, -46.319);&#xD;&#xA;int objEntryId = 195142;&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(position, objEntryId))&#xD;&#xA;{&#xD;&#xA;    System.Threading.Thread.Sleep(1500);&#xD;&#xA;}" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="!Quest.GetQuestCompleted(10291)" />
+    <QuestsSorted Action="PickUp" NameClass="ThroughtheDarkPortal" />
+    <QuestsSorted Action="If" NameClass="wManager.Wow.Helpers.Usefuls.MapZoneName == &quot;Blasted Lands&quot;" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.wManagerSetting.CurrentSetting.FlightMasterDiscoverRange = 1;&#xD;&#xA;wManager.wManagerSetting.CurrentSetting.FlightMasterTaxiUse = false;" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(-11920.39, -3206.81, -15.35475f))" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int)ContinentId.Expansion01" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.wManagerSetting.CurrentSetting.FlightMasterDiscoverRange = 1;&#xD;&#xA;wManager.wManagerSetting.CurrentSetting.FlightMasterTaxiUse = false;" />
+    <QuestsSorted Action="If" NameClass="!Quest.GetQuestCompleted(10291)" />
+    <QuestsSorted Action="TurnIn" NameClass="ThroughtheDarkPortal" />
+    <QuestsSorted Action="PickUp" NameClass="ArrivalinOutland" />
+    <QuestsSorted Action="TurnIn" NameClass="ArrivalinOutland" />
+    <QuestsSorted Action="If" NameClass="!Quest.GetQuestCompleted(10289)" />
+    <QuestsSorted Action="PickUp" NameClass="JourneytoThrallmar" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(-180.0702f, 1028.402f, 54.17779f), 18930, 1);" />
+    <QuestsSorted Action="TurnIn" NameClass="JourneytoThrallmar" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="PickUp" NameClass="ReporttoNazgrel" />
+    <QuestsSorted Action="TurnIn" NameClass="ReporttoNazgrel" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.wManagerSetting.CurrentSetting.FlightMasterDiscoverRange = 300;&#xD;&#xA;wManager.wManagerSetting.CurrentSetting.FlightMasterTaxiUse = true;" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="wManager.Wow.Helpers.Usefuls.MapZoneName == &quot;Blasted Lands&quot;" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(-11920.39, -3206.81, -15.35475f))" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="LoadProfile" NameClass="Wholesome Grinder\Horde grinder 1-80.xml" />
+  </QuestsSorted>
+  <NpcQuest>
+    <NPCQuest Id="19255" Name="General Krakork" GameObject="false">
+      <PickUpQuests>
+        <int>10291</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>10289</int>
+      </TurnInQuests>
+      <Position X="206.7718" Y="2654.304" Z="88.26604" Type="Flying" />
+    </NPCQuest>
+    <NPCQuest Id="19253" Name="Lieutenant General Orion" GameObject="false">
+      <PickUpQuests>
+        <int>10120</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>9407</int>
+      </TurnInQuests>
+      <Position X="-233.8333" Y="1028.031" Z="54.3238" Type="Flying" />
+    </NPCQuest>
+    <NPCQuest Id="3230" Name="Nazgrel" GameObject="false">
+      <PickUpQuests>
+        <int>10121</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>10291</int>
+      </TurnInQuests>
+      <Position X="242.9973" Y="2698.199" Z="89.75955" />
+    </NPCQuest>
+    <NPCQuest Id="18930" Name="Vlagga Freyfeather" GameObject="false">
+      <PickUpQuests>
+        <int>10289</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>10120</int>
+      </TurnInQuests>
+      <Position X="-176.4199" Y="1028.531" Z="54.17289" Type="Flying" />
+    </NPCQuest>
+    <NPCQuest Id="19254" Name="Warlord Dar'toon" GameObject="false">
+      <PickUpQuests>
+        <int>9407</int>
+      </PickUpQuests>
+      <TurnInQuests />
+      <Position X="-11817.3" Y="-3187.89" Z="-30.67971" Type="Flying" />
+    </NPCQuest>
+  </NpcQuest>
+  <Npc />
+  <EasyQuests>
+    <EasyQuest>
+      <Name>Through the Dark Portal</Name>
+      <QuestId>
+        <int>9407</int>
+      </QuestId>
+      <QuestType>None</QuestType>
+      <QuestClass />
+      <ObjectiveCount1>0</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>false</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition />
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+    <EasyQuest>
+      <Name>Arrival in Outland</Name>
+      <QuestId>
+        <int>10120</int>
+      </QuestId>
+      <QuestType>None</QuestType>
+      <QuestClass />
+      <ObjectiveCount1>1</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>false</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition />
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+    <EasyQuest>
+      <Name>Journey to Thrallmar</Name>
+      <QuestId>
+        <int>10289</int>
+      </QuestId>
+      <QuestType>InteractWithNpc</QuestType>
+      <QuestClass xsi:type="InteractWithNpcEasyQuestClass">
+        <HotSpots>
+          <Vector3 X="-176.42" Y="1028.53" Z="54.17296" />
+        </HotSpots>
+        <GossipOptionNpcInteractWith>1</GossipOptionNpcInteractWith>
+        <Macro />
+        <IgnoreIfDead>false</IgnoreIfDead>
+        <EntryIdTarget>
+          <int>18930</int>
+        </EntryIdTarget>
+        <Range>4.5</Range>
+      </QuestClass>
+      <ObjectiveCount1>1</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>false</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition />
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+    <EasyQuest>
+      <Name>Report to Nazgrel</Name>
+      <QuestId>
+        <int>10291</int>
+      </QuestId>
+      <QuestType>None</QuestType>
+      <QuestClass />
+      <ObjectiveCount1>0</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>false</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition />
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+  </EasyQuests>
+  <Script>
+public class MyCustomScript
+{
+    static MyCustomScript()
+    {
+        // You can put here code to run when bot start, you can also add methods and classes.
+    }
+}
+</Script>
+  <OffMeshConnections />
+  <BlacklistNpc />
+  <BlacklistNpcType />
+  <Blackspots />
+</EasyQuestProfile>

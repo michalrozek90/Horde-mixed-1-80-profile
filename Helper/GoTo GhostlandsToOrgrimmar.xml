@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EasyQuestProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <QuestsSorted>
+    <QuestsSorted Action="RunCode" NameClass="wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;&#xD;&#xA;wManager.wManagerSetting.CurrentSetting.FlightMasterDiscoverRange = 1;" />
+    <QuestsSorted Action="While" NameClass="Usefuls.ContinentId == (int) ContinentId.Expansion01" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[GrinderSuite]\124h\124r: \124cff00ccff\124hGoing to Silvermoon-Undercity portal\124h\124r&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(10042.97, -7000.905, 61.98666));" />
+    <QuestsSorted Action="If" NameClass="ObjectManager.Me.Position.DistanceTo2D(new Vector3(10032.4f, -7000.29f, 61.3098f)) &lt; 300" />
+    <QuestsSorted Action="RunCode" NameClass="var position = new Vector3(10032.4f, -7000.29f, 61.3098f);&#xD;&#xA;int objEntryId = 184502;&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(position, objEntryId))&#xD;&#xA;{&#xD;&#xA;    System.Threading.Thread.Sleep(1500);&#xD;&#xA;}" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="WriteLog" NameClass="GoToPortal End" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="While" NameClass="Usefuls.ContinentId == (int) ContinentId.Azeroth" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[GrinderSuite]\124h\124r: \124cff00ccff\124hLet's take the zeppelin to Orgrimmar\124h\124r&quot;)" />
+    <QuestsSorted Action="Pulse" NameClass="TirisfalZeppelin" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="Wait" NameClass="5000" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="LoadProfile" NameClass="Wholesome Grinder\Helper\Hearthstone Orgrimmar.xml" />
+  </QuestsSorted>
+  <NpcQuest />
+  <Npc />
+  <EasyQuests>
+    <EasyQuest>
+      <Name>Tirisfal Zeppelin</Name>
+      <QuestId />
+      <QuestType>OverridePulseCSharpCode</QuestType>
+      <QuestClass xsi:type="OverridePulseCSharpCodeEasyQuestClass">
+        <Code>var zeppelinEntryId = 164871;
+
+var fromZeppelinWaitPosition = new Vector3(2062.376, 292.998, 114.973);
+var fromPlayerWaitPosition = new Vector3(2066.835, 289.1198, 97.03132);
+var fromPlayerInZeppelinPosition = new Vector3(2069.023, 296.8334, 97.32385);
+
+var toZeppelinWaitPosition = new Vector3(1833.509, -4391.543, 152.7679);
+var toPlayerLeavePosition = new Vector3(1843.876, -4394.533, 135.233);
+
+wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;
+
+if (!Conditions.InGameAndConnectedAndProductStartedNotInPause)
+    return true;
+
+if (Usefuls.ContinentId == 0)
+{
+    if (!ObjectManager.Me.InTransport)
+    {
+        if (GoToTask.ToPosition(fromPlayerWaitPosition))
+        {
+            var zeppelin = ObjectManager.GetWoWGameObjectByEntry(zeppelinEntryId).OrderBy(o =&gt; o.GetDistance).FirstOrDefault();
+            if (zeppelin != null &amp;&amp; zeppelin.Position.DistanceTo(fromZeppelinWaitPosition) &lt; 1)
+            {
+                GoToTask.ToPosition(fromPlayerInZeppelinPosition);
+            }
+        }
+    }
+}
+else if (Usefuls.ContinentId == 1)
+{
+    if (ObjectManager.Me.InTransport)
+    {
+        var zeppelin = ObjectManager.GetWoWGameObjectByEntry(zeppelinEntryId).OrderBy(o =&gt; o.GetDistance).FirstOrDefault();
+        if (zeppelin != null &amp;&amp; zeppelin.Position.DistanceTo(toZeppelinWaitPosition) &lt; 1)
+        {
+            GoToTask.ToPosition(toPlayerLeavePosition);
+        }
+    }
+}
+return true;</Code>
+      </QuestClass>
+      <ObjectiveCount1>0</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>false</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition>return Usefuls.ContinentId == 0;</CanCondition>
+      <IsCompleteCondition>return Usefuls.ContinentId == 1 &amp;&amp; !ObjectManager.Me.InTransport;</IsCompleteCondition>
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>true</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>6</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+  </EasyQuests>
+  <Script />
+  <OffMeshConnections>
+    <OffMeshConnection>
+      <Path>
+        <Vector3 X="2066.835" Y="289.1198" Z="97.03132" />
+        <Vector3 X="2069.023" Y="296.8334" Z="97.32385" />
+      </Path>
+      <ContinentId>0</ContinentId>
+      <Type>Unidirectional</Type>
+      <TryToUseEvenIfCanFindPathSuccess>false</TryToUseEvenIfCanFindPathSuccess>
+      <Name>Zeppelin</Name>
+    </OffMeshConnection>
+    <OffMeshConnection>
+      <Path>
+        <Vector3 X="1835.873" Y="-4385.681" Z="135.0616" />
+        <Vector3 X="1843.876" Y="-4394.533" Z="135.233" />
+      </Path>
+      <ContinentId>1</ContinentId>
+      <Type>Unidirectional</Type>
+      <TryToUseEvenIfCanFindPathSuccess>false</TryToUseEvenIfCanFindPathSuccess>
+      <Name>Zeppelin</Name>
+    </OffMeshConnection>
+  </OffMeshConnections>
+  <BlacklistNpc />
+  <BlacklistNpcType />
+  <Blackspots />
+</EasyQuestProfile>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EasyQuestProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <QuestsSorted>
+    <QuestsSorted Action="RunCode" NameClass="foreach (var woWItem in wManager.Wow.Helpers.Bag.GetBagItem())&#xD;&#xA;        {&#xD;&#xA;            if (!string.IsNullOrWhiteSpace(&quot;Skinning Knife&quot;) &amp;&amp; !wManager.wManagerSetting.CurrentSetting.DoNotSellList.Contains(&quot;Skinning Knife&quot;))&#xD;&#xA;                wManager.wManagerSetting.CurrentSetting.DoNotSellList.Add(&quot;Skinning Knife&quot;);&#xD;&#xA;        }" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[SkinningSuite]\124h\124r: \124cff00ccff\124hSkinning navigator started!\124h\124r&quot;)" />
+    <QuestsSorted Action="StepName" NameClass="Start" />
+    <QuestsSorted Action="While" NameClass="(Skill.GetMaxValue(SkillLine.Skinning)) == 0 || !ItemsManager.HasItemById(7005)" />
+    <QuestsSorted Action="If" NameClass="(Skill.GetMaxValue(SkillLine.Skinning)) == 0 &amp;&amp; Usefuls.ContinentId == (int) ContinentId.Kalimdor &amp;&amp; ObjectManager.Me.Level &gt;= 5 &amp;&amp; Lua.LuaDoString&lt;int&gt;(&quot;return GetMoney()&quot;) &gt;= 92 &amp;&amp; (ObjectManager.Me.PlayerRace == PlayerFactions.Orc || ObjectManager.Me.PlayerRace == PlayerFactions.Troll)" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[SkinningSuite]\124h\124r: \124cff00ccff\124hLet's visit skinning trainer in OG\124h\124r&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO SKINNING TRAINER IN ORGRIMMAR //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(1849.04, -4569.23, 24.98792), 7088))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="(Skill.GetMaxValue(SkillLine.Skinning)) &gt; 0 &amp;&amp; (!ItemsManager.HasItemById(7005)) &amp;&amp; (ObjectManager.Me.PlayerRace == PlayerFactions.Orc || ObjectManager.Me.PlayerRace == PlayerFactions.Troll)" />
+    <QuestsSorted Action="RunCode" NameClass="if (!ItemsManager.HasItemById(7005))&#xD;&#xA; {&#xD;&#xA; wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(1848.01, -4564.89, 24.98728), 3366, 1, false);&#xD;&#xA; System.Threading.Thread.Sleep(5000);&#xD;&#xA; wManager.Wow.Helpers.Vendor.BuyItem(&quot;Skinning Knife&quot;,1); // change Skinning Knife to what item you want. do not remove &quot;&quot;&#xD;&#xA; System.Threading.Thread.Sleep(5000); &#xD;&#xA; }&#xD;&#xA; &#xD;&#xA; &#xD;&#xA;" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId != (int) ContinentId.Kalimdor" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="(Skill.GetMaxValue(SkillLine.Skinning)) == 0 &amp;&amp; Usefuls.ContinentId == (int) ContinentId.Kalimdor &amp;&amp; ObjectManager.Me.Level &gt;= 5 &amp;&amp; Lua.LuaDoString&lt;int&gt;(&quot;return GetMoney()&quot;) &gt;= 92 &amp;&amp; ObjectManager.Me.PlayerRace == PlayerFactions.Tauren" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[SkinningSuite]\124h\124r: \124cff00ccff\124hLet's visit skinning trainer in Mulgore\124h\124r&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO SKINNING TRAINER IN BLOODHOOF VILLAGE //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(-2251.83, -288.483, -9.424792), 6290))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="(Skill.GetMaxValue(SkillLine.Skinning)) &gt; 0 &amp;&amp; (!ItemsManager.HasItemById(7005)) &amp;&amp; ObjectManager.Me.PlayerRace == PlayerFactions.Tauren" />
+    <QuestsSorted Action="RunCode" NameClass="if (!ItemsManager.HasItemById(7005))&#xD;&#xA; {&#xD;&#xA; wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(-2265.6, -324.433, -9.42479), 3081, 1, false);&#xD;&#xA; System.Threading.Thread.Sleep(5000);&#xD;&#xA; wManager.Wow.Helpers.Vendor.BuyItem(&quot;Skinning Knife&quot;,1); // change Skinning Knife to what item you want. do not remove &quot;&quot;&#xD;&#xA; System.Threading.Thread.Sleep(5000); &#xD;&#xA; }&#xD;&#xA; &#xD;&#xA; &#xD;&#xA;" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId != (int) ContinentId.Azeroth" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="(Skill.GetMaxValue(SkillLine.Skinning)) == 0 &amp;&amp; Usefuls.ContinentId == (int) ContinentId.Azeroth &amp;&amp; ObjectManager.Me.Level &gt;= 5 &amp;&amp; Lua.LuaDoString&lt;int&gt;(&quot;return GetMoney()&quot;) &gt;= 92 &amp;&amp; ObjectManager.Me.PlayerRace == PlayerFactions.Undead" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[SkinningSuite]\124h\124r: \124cff00ccff\124hLet's visit skinning trainer in UC\124h\124r&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO SKINNING TRAINER IN BRILL //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(2023.04, 73.922, 36.302), 6289))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="(Skill.GetMaxValue(SkillLine.Skinning)) &gt; 0 &amp;&amp; (!ItemsManager.HasItemById(7005)) &amp;&amp; ObjectManager.Me.PlayerRace == PlayerFactions.Undead" />
+    <QuestsSorted Action="RunCode" NameClass="if (!ItemsManager.HasItemById(7005))&#xD;&#xA; {&#xD;&#xA; wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(2259.17, 275.96, 34.757), 2118, 1, false);&#xD;&#xA; System.Threading.Thread.Sleep(5000);&#xD;&#xA; wManager.Wow.Helpers.Vendor.BuyItem(&quot;Skinning Knife&quot;,1); // change Skinning Knife to what item you want. do not remove &quot;&quot;&#xD;&#xA; System.Threading.Thread.Sleep(5000); &#xD;&#xA; }&#xD;&#xA; &#xD;&#xA; &#xD;&#xA;" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="(Skill.GetMaxValue(SkillLine.Skinning)) == 0  &amp;&amp; ObjectManager.Me.Level &gt;= 5 &amp;&amp; Lua.LuaDoString&lt;int&gt;(&quot;return GetMoney()&quot;) &gt;= 92 &amp;&amp; Usefuls.ContinentId == (int) ContinentId.Expansion01" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[SkinningSuite]\124h\124r: \124cff00ccff\124hLet's visit skinning trainer \124h\124r&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO SKINNING TRAINER NEAR SILVERMOON //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(9362.89, -7134.58, 8.583538), 16273))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="(Skill.GetMaxValue(SkillLine.Skinning)) &gt; 0 &amp;&amp; (!ItemsManager.HasItemById(7005)) &amp;&amp; ObjectManager.Me.PlayerRace == PlayerFactions.BloodElf" />
+    <QuestsSorted Action="RunCode" NameClass="if (!ItemsManager.HasItemById(7005))&#xD;&#xA; {&#xD;&#xA; wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(9361, -7138.99, 8.709969), 18277, 1, false);&#xD;&#xA; System.Threading.Thread.Sleep(5000);&#xD;&#xA; wManager.Wow.Helpers.Vendor.BuyItem(&quot;Skinning Knife&quot;,1); // change Skinning Knife to what item you want. do not remove &quot;&quot;&#xD;&#xA; System.Threading.Thread.Sleep(5000); &#xD;&#xA; }&#xD;&#xA; &#xD;&#xA; &#xD;&#xA;" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <!--  -->
+    <QuestsSorted Action="If" NameClass="(Skill.GetMaxValue(SkillLine.Skinning)) &gt; 0 &amp;&amp; (ItemsManager.HasItemById(7005))" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.wManagerSetting.CurrentSetting.SkinMobs = true;" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="While" NameClass="Skill.GetValue(SkillLine.Skinning) &gt;= 50 &amp;&amp; Skill.GetMaxValue(SkillLine.Skinning) == 75" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor &amp;&amp; ObjectManager.Me.Level &gt;= 12 &amp;&amp; Lua.LuaDoString&lt;int&gt;(&quot;return GetMoney()&quot;) &gt;= 500" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[SkinningSuite]\124h\124r: \124cff00ccff\124hLet's visit skinning trainer in OG\124h\124r&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO SKINNING TRAINER IN ORGRIMMAR //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(1849.04, -4569.23, 24.98792), 7088))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="While" NameClass="Skill.GetValue(SkillLine.Skinning) &gt;= 125 &amp;&amp; Skill.GetMaxValue(SkillLine.Skinning) == 150" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor &amp;&amp; ObjectManager.Me.Level &gt;= 20 &amp;&amp; Lua.LuaDoString&lt;int&gt;(&quot;return GetMoney()&quot;) &gt;= 5000" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[SkinningSuite]\124h\124r: \124cff00ccff\124hLet's visit skinning trainer in Camp Taurajo\124h\124r&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO SKINNING TRAINER IN CAMP TAURAJO //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(-2380.12, -1944.53, 95.78321), 6387))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="While" NameClass="Skill.GetValue(SkillLine.Skinning) &gt;= 200 &amp;&amp; Skill.GetMaxValue(SkillLine.Skinning) == 225" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor &amp;&amp; ObjectManager.Me.Level &gt;= 35 &amp;&amp; Lua.LuaDoString&lt;int&gt;(&quot;return GetMoney()&quot;) &gt;= 50000" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[SkinningSuite]\124h\124r: \124cff00ccff\124hLet's visit skinning trainer in Camp Taurajo\124h\124r&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO SKINNING TRAINER IN CAMP TAURAJO //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(-2380.12, -1944.53, 95.78321), 6387))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="While" NameClass="Skill.GetValue(SkillLine.Skinning) &gt;= 275 &amp;&amp; Skill.GetMaxValue(SkillLine.Skinning) == 300" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Expansion01 &amp;&amp; ObjectManager.Me.Level &gt;= 58 &amp;&amp; Lua.LuaDoString&lt;int&gt;(&quot;return GetMoney()&quot;) &gt;= 100000" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[SkinningSuite]\124h\124r: \124cff00ccff\124hLet's visit skinning trainer in Thrallmar\124h\124r&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO SKINNING TRAINER IN OUTLAND //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(151.239, 2633.32, 86.54384), 18755))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="While" NameClass="Skill.GetValue(SkillLine.Skinning) &gt;= 350 &amp;&amp; Skill.GetMaxValue(SkillLine.Skinning) == 375" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Northrend &amp;&amp; ObjectManager.Me.Level &gt;= 68 &amp;&amp; Lua.LuaDoString&lt;int&gt;(&quot;return GetMoney()&quot;) &gt;= 350000" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[SkinningSuite]\124h\124r: \124cff00ccff\124hLet's visit skinning trainer in Vengeance Landing\124h\124r&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO SKINNING TRAINER IN NORTHREND //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(1983.1, -6129.26, 24.40569), 26963))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="LoadProfile" NameClass="Wholesome Grinder\Horde grinder 1-80.xml" />
+  </QuestsSorted>
+  <NpcQuest />
+  <Npc />
+  <EasyQuests />
+  <Script>
+public class MyCustomScript
+{
+    static MyCustomScript()
+    {
+        // You can put here code to run when bot start, you can also add methods and classes.
+    }
+}
+</Script>
+  <OffMeshConnections>
+    <OffMeshConnection>
+      <Path>
+        <Vector3 X="-254.302" Y="2117.562" Z="81.17989" />
+        <Vector3 X="-245.8811" Y="2114.422" Z="81.17989" />
+      </Path>
+      <ContinentId>33</ContinentId>
+      <Type>Unidirectional</Type>
+      <TryToUseEvenIfCanFindPathSuccess>false</TryToUseEvenIfCanFindPathSuccess>
+      <Name>test</Name>
+    </OffMeshConnection>
+  </OffMeshConnections>
+  <BlacklistNpc />
+  <BlacklistNpcType />
+  <Blackspots />
+</EasyQuestProfile>

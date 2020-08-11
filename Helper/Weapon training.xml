@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EasyQuestProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <QuestsSorted>
+    <QuestsSorted Action="StepName" NameClass="START" />
+    <QuestsSorted Action="RunCode" NameClass="// SETTINGS&#xD;&#xA;wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;&#xD;&#xA;wManager.wManagerSetting.CurrentSetting.AttackBeforeBeingAttacked = false;&#xD;&#xA;wManager.Wow.Helpers.Conditions.ForceIgnoreIsAttacked = true;" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Northrend || Usefuls.ContinentId == (int) ContinentId.Expansion01" />
+    <QuestsSorted Action="GoToStep" NameClass="COORINATION" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+<!-- DEATH KNIGHT -->
+    <QuestsSorted Action="While" NameClass="ObjectManager.Me.WowClass == WoWClass.DeathKnight" />
+    <QuestsSorted Action="While" NameClass="(wManager.Wow.Helpers.SpellManager.!KnowSpell(196) || wManager.Wow.Helpers.SpellManager.!KnowSpell(197))" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Azeroth" />
+    <QuestsSorted Action="Pulse" NameClass="GoToTirisfaltoDurotar" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN ORGRIMMAR //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(2090.27, -4824.21, 24.34898), 2704))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="While" NameClass="(wManager.Wow.Helpers.SpellManager.!KnowSpell(198) || wManager.Wow.Helpers.SpellManager.!KnowSpell(199))" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Azeroth" />
+    <QuestsSorted Action="Pulse" NameClass="GoToTirisfaltoDurotar" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN THUNDER BLUFF //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(-1286.47, 89.4229, 129.1965), 11869))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="While" NameClass="(wManager.Wow.Helpers.SpellManager.!KnowSpell(201) || wManager.Wow.Helpers.SpellManager.!KnowSpell(202))" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Azeroth" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN UNDERCITY //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(1668.21, 323.349, -62.15103), 11870))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor" />
+    <QuestsSorted Action="Pulse" NameClass="GoToDurotartoTirisfal" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="While" NameClass="wManager.Wow.Helpers.SpellManager.!KnowSpell(200)" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor" />
+    <QuestsSorted Action="Pulse" NameClass="GoToDurotartoTirisfal" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Azeroth" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(new Vector3(2376.07, 359.997, 37.8147), 104593)" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Expansion01" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN SILVERMOON //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(9841.1, -7506.1, 14.94352), 16621))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor" />
+    <QuestsSorted Action="Pulse" NameClass="GoToDurotartoTirisfal" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+<!-- WARRIOR -->
+    <QuestsSorted Action="While" NameClass="ObjectManager.Me.WowClass == WoWClass.Warrior" />
+    <QuestsSorted Action="While" NameClass="wManager.Wow.Helpers.SpellManager.!KnowSpell(196) || wManager.Wow.Helpers.SpellManager.!KnowSpell(197) || wManager.Wow.Helpers.SpellManager.!KnowSpell(264) || wManager.Wow.Helpers.SpellManager.!KnowSpell(227) || wManager.Wow.Helpers.SpellManager.!KnowSpell(2567)" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Azeroth" />
+    <QuestsSorted Action="Pulse" NameClass="GoToTirisfaltoDurotar" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN ORGRIMMAR 1 //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(2090.27, -4824.21, 24.34898), 2704))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN ORGRIMMAR 2 //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(2091.02, -4826.49, 24.33865), 11868))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+
+
+    <!-- <QuestsSorted Action="While" NameClass="wManager.Wow.Helpers.SpellManager.!KnowSpell(198) || wManager.Wow.Helpers.SpellManager.!KnowSpell(199) || wManager.Wow.Helpers.SpellManager.!KnowSpell(266) || wManager.Wow.Helpers.SpellManager.!KnowSpell(227)" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Azeroth" />
+    <QuestsSorted Action="Pulse" NameClass="GoToTirisfaltoDurotar" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN THUNDER BLUFF //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(-1286.47, 89.4229, 129.1965), 11869))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="While" NameClass="wManager.Wow.Helpers.SpellManager.!KnowSpell(201) || wManager.Wow.Helpers.SpellManager.!KnowSpell(202) || wManager.Wow.Helpers.SpellManager.!KnowSpell(5011) || wManager.Wow.Helpers.SpellManager.!KnowSpell(1180)" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Azeroth" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN UNDERCITY //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(1668.21, 323.349, -62.15103), 11870))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor" />
+    <QuestsSorted Action="Pulse" NameClass="GoToDurotartoTirisfal" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="While" NameClass="wManager.Wow.Helpers.SpellManager.!KnowSpell(200) || wManager.Wow.Helpers.SpellManager.!KnowSpell(264) || wManager.Wow.Helpers.SpellManager.!KnowSpell(2567)" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor" />
+    <QuestsSorted Action="Pulse" NameClass="GoToDurotartoTirisfal" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Azeroth" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(new Vector3(2376.07, 359.997, 37.8147), 104593)" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Expansion01" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN SILVERMOON //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(9841.1, -7506.1, 14.94352), 16621))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="Usefuls.ContinentId == (int) ContinentId.Kalimdor" />
+    <QuestsSorted Action="Pulse" NameClass="GoToDurotartoTirisfal" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+
+
+
+
+    <QuestsSorted Action="StepName" NameClass="COORDINATION" />
+    <QuestsSorted Action="While" NameClass="Usefuls.ContinentId == (int) ContinentId.Northrend" />
+    <QuestsSorted Action="RunCode" NameClass="// RUNNING TO DALARAN PORTALS //&#xD;&#xA;&#xD;&#xA;wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(5915.935, 583.6956, 639.5448));" />
+    <QuestsSorted Action="RunCode" NameClass="// PORTAL FROM DALARAN TO ORGRIMMAR // &#xD;&#xA;&#xD;&#xA;var position = new Vector3(5925.85, 593.25, 640.563);&#xD;&#xA;int objEntryId = 191009;&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(position, objEntryId))&#xD;&#xA;{&#xD;&#xA;    System.Threading.Thread.Sleep(1500);&#xD;&#xA;}" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="While" NameClass="Usefuls.ContinentId == (int) ContinentId.Expansion01" />
+    <QuestsSorted Action="RunCode" NameClass="// RUNNING TO SHATTRATH PORTALS //&#xD;&#xA;&#xD;&#xA;wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(-1923.478, 5449.676, -12.42795));" />
+    <QuestsSorted Action="RunCode" NameClass="// PORTAL FROM SHATTRATH TO ORGRIMMAR // &#xD;&#xA;&#xD;&#xA;var position = new Vector3(-1934.49f, 5453.48f, -12.4279f);&#xD;&#xA;int objEntryId = 183323;&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithGameObject(position, objEntryId))&#xD;&#xA;{&#xD;&#xA;    System.Threading.Thread.Sleep(1500);&#xD;&#xA;}" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="GoToStep" NameClass="START" />
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN ORGRIMMAR 1 //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(1849.04, -4569.23, 24.98792), 7088))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" /> -->
+  </QuestsSorted>
+  <NpcQuest />
+  <Npc />
+  <EasyQuests>
+    <EasyQuest>
+      <Name>GoTo Tirisfal to Durotar</Name>
+      <QuestId />
+      <QuestType>OverridePulseCSharpCode</QuestType>
+      <QuestClass xsi:type="OverridePulseCSharpCodeEasyQuestClass">
+        <Code>var zeppelinEntryId = 164871;
+
+var fromZeppelinWaitPosition = new Vector3(2062.376, 292.998, 114.973);
+var fromPlayerWaitPosition = new Vector3(2066.835, 289.1198, 97.03132);
+var fromPlayerInZeppelinPosition = new Vector3(2069.023, 296.8334, 97.32385);
+
+var toZeppelinWaitPosition = new Vector3(1833.509, -4391.543, 152.7679);
+var toPlayerLeavePosition = new Vector3(1843.876, -4394.533, 135.233);
+
+wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;
+
+if (!Conditions.InGameAndConnectedAndProductStartedNotInPause)
+    return true;
+
+if (Usefuls.ContinentId == 0)
+{
+    if (!ObjectManager.Me.InTransport)
+    {
+        if (GoToTask.ToPosition(fromPlayerWaitPosition))
+        {
+            var zeppelin = ObjectManager.GetWoWGameObjectByEntry(zeppelinEntryId).OrderBy(o =&gt; o.GetDistance).FirstOrDefault();
+            if (zeppelin != null &amp;&amp; zeppelin.Position.DistanceTo(fromZeppelinWaitPosition) &lt; 1)
+            {
+                GoToTask.ToPosition(fromPlayerInZeppelinPosition);
+            }
+        }
+    }
+}
+else if (Usefuls.ContinentId == 1)
+{
+    if (ObjectManager.Me.InTransport)
+    {
+        var zeppelin = ObjectManager.GetWoWGameObjectByEntry(zeppelinEntryId).OrderBy(o =&gt; o.GetDistance).FirstOrDefault();
+        if (zeppelin != null &amp;&amp; zeppelin.Position.DistanceTo(toZeppelinWaitPosition) &lt; 1)
+        {
+            GoToTask.ToPosition(toPlayerLeavePosition);
+        }
+    }
+}
+return true;</Code>
+      </QuestClass>
+      <ObjectiveCount1>0</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>false</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition>return Usefuls.ContinentId == 0;</CanCondition>
+      <IsCompleteCondition>return Usefuls.ContinentId == 1 &amp;&amp; !ObjectManager.Me.InTransport;</IsCompleteCondition>
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>true</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>6</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+    <EasyQuest>
+      <Name>GoTo Durotar to Tirisfal</Name>
+      <QuestId />
+      <QuestType>OverridePulseCSharpCode</QuestType>
+      <QuestClass xsi:type="OverridePulseCSharpCodeEasyQuestClass">
+        <Code>// I am using the sample of how to use Zeppelin/Ship
+
+/* Quest settings:
+    * Can condition: "return Usefuls.ContinentId == (int) ContinentId.Kalimdor;"
+    * Is complete condition: "return Usefuls.ContinentId == (int) ContinentId.Northrend &amp;&amp; !ObjectManager.Me.InTransport;"
+    * Not required in quest log: "True"
+    * Quest type: "OverridePulseCSharpCode"
+*/
+
+// You can get zeppelin/ship/player positions and entry ID in tab "Tools" &gt; "Development Tools" &gt; "Dump all informations" (or "Memory information").
+
+// Settings:
+var zeppelinEntryId = 164871; // Zeppelin/Ship EntryId
+
+// From
+var fromZeppelinWaitPosition = new Vector3(1318.107, -4658.047, 71.86043); // Position where Zeppelin/Ship waits players (from)
+var fromPlayerWaitPosition = new Vector3(1323.866, -4651.902, 53.80487); // Position where the player waits Zeppelin/Ship (from)
+var fromPlayerInZeppelinPosition = new Vector3(1314.561, -4653.52, 54.11075); // Position where the player waits in the Zeppelin/Ship (from)
+
+// To
+var toZeppelinWaitPosition = new Vector3(2062.376, 292.9981, 114.973); // Position where Zeppelin/Ship waits players (to)
+var toPlayerLeavePosition = new Vector3(2066.346, 287.3938, 97.03135); // Position to go out the Zeppelin/Ship (to)
+
+// Change WRobot settings:
+wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;
+
+// Code:
+if (!Conditions.InGameAndConnectedAndProductStartedNotInPause)
+    return true;
+
+if (Usefuls.ContinentId == (int)ContinentId.Kalimdor)
+{
+    if (!ObjectManager.Me.InTransport)
+    {
+        if (GoToTask.ToPosition(fromPlayerWaitPosition))
+        {
+            var zeppelin = ObjectManager.GetWoWGameObjectByEntry(zeppelinEntryId).OrderBy(o =&gt; o.GetDistance).FirstOrDefault();
+            if (zeppelin != null &amp;&amp; zeppelin.Position.DistanceTo(fromZeppelinWaitPosition) &lt; 1)
+            {
+                GoToTask.ToPosition(fromPlayerInZeppelinPosition);
+            }
+        }
+    }
+}
+else if (Usefuls.ContinentId == (int)ContinentId.Azeroth)
+{
+    if (ObjectManager.Me.InTransport)
+    {
+        var zeppelin = ObjectManager.GetWoWGameObjectByEntry(zeppelinEntryId).OrderBy(o =&gt; o.GetDistance).FirstOrDefault();
+        if (zeppelin != null &amp;&amp; zeppelin.Position.DistanceTo(toZeppelinWaitPosition) &lt; 1)
+        {
+            GoToTask.ToPosition(toPlayerLeavePosition);
+        }
+    }
+}
+return true;</Code>
+      </QuestClass>
+      <ObjectiveCount1>0</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>false</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition>return Usefuls.ContinentId == (int) ContinentId.Kalimdor;</CanCondition>
+      <IsCompleteCondition>return Usefuls.ContinentId == (int) ContinentId.Azeroth &amp;&amp; !ObjectManager.Me.InTransport;</IsCompleteCondition>
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>true</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>999</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+  </EasyQuests>
+  <Script>
+public class MyCustomScript
+{
+    static MyCustomScript()
+    {
+        // You can put here code to run when bot start, you can also add methods and classes.
+    }
+}
+</Script>
+  <OffMeshConnections />
+  <BlacklistNpc />
+  <BlacklistNpcType />
+  <Blackspots />
+</EasyQuestProfile>
+
+  <!-- 
+    ORGRIMMAR TRAINER (TROLL NPC)
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN ORGRIMMAR //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(2090.27, -4824.21, 24.34898), 2704))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+
+    ORGRIMMAR TRAINER (ORC NPC)
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN ORGRIMMAR //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(2091.02, -4826.49, 24.33865), 11868))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+
+    THUNDER BLUFF TRAINER
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN THUNDER BLUFF //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(-1286.47, 89.4229, 129.1965), 11869))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+
+    UNDERCITY TRAINER
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN UNDERCITY //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(1668.21, 323.349, -62.15103), 11870))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+
+    SILVERMOON TRAINER
+    <QuestsSorted Action="RunCode" NameClass="// GOING TO WEAPON TRAINER IN SILVERMOON //&#xD;&#xA;&#xD;&#xA;if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(9841.1, -7506.1, 14.94352), 16621))&#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+   -->
+
+   <!-- 
+    1H AXES - wManager.Wow.Helpers.SpellManager.KnowSpell(196)
+    2H AXES - wManager.Wow.Helpers.SpellManager.KnowSpell(197)
+    1H MACES - wManager.Wow.Helpers.SpellManager.KnowSpell(198)
+    2H MACES - wManager.Wow.Helpers.SpellManager.KnowSpell(199)
+    1H SWORDS - wManager.Wow.Helpers.SpellManager.KnowSpell(201)
+    2H SWORDS - wManager.Wow.Helpers.SpellManager.KnowSpell(202)
+    POLEARMS - wManager.Wow.Helpers.SpellManager.KnowSpell(200)
+    STAVES - wManager.Wow.Helpers.SpellManager.KnowSpell(227)
+    FIST WEAPONS - wManager.Wow.Helpers.SpellManager.KnowSpell(15590)
+    DAGGERS - wManager.Wow.Helpers.SpellManager.KnowSpell(1180)
+    BOWS - wManager.Wow.Helpers.SpellManager.KnowSpell(264)
+    CROSSBOWS - wManager.Wow.Helpers.SpellManager.KnowSpell(5011)
+    GUNS - wManager.Wow.Helpers.SpellManager.KnowSpell(266)
+    WANDS - wManager.Wow.Helpers.SpellManager.KnowSpell(5009)
+    THROWN - wManager.Wow.Helpers.SpellManager.KnowSpell(2567)
+    -->

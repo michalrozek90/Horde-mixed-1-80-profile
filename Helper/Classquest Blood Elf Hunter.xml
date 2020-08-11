@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EasyQuestProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <QuestsSorted>
+    <QuestsSorted Action="StepName" NameClass="Start" />
+    <QuestsSorted Action="RunCode" NameClass="ProfileRestarter.StartProfileRestarter();" />
+    <QuestsSorted Action="RunLuaCode" NameClass="DEFAULT_CHAT_FRAME:AddMessage(&quot;Current Profile: Learn the taming for your slave.&quot;)" />
+    <QuestsSorted Action="PulseAllInOne" NameClass="TheHuntersPath" />
+    <QuestsSorted Action="If" NameClass="(!wManager.Wow.Helpers.SpellManager.KnowSpell(982))" />
+    <QuestsSorted Action="If" NameClass="(!(Quest.IsObjectiveComplete(1, 9617)))" />
+    <QuestsSorted Action="PulseAllInOne" NameClass="TamingtheBeas" />
+    <QuestsSorted Action="RunLuaCode" NameClass="PetDismiss()" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="(!(Quest.IsObjectiveComplete(1, 9484)))" />
+    <QuestsSorted Action="PulseAllInOne" NameClass="TamingtheBeas2" />
+    <QuestsSorted Action="RunLuaCode" NameClass="PetDismiss()" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="(!(Quest.IsObjectiveComplete(1, 9486)))" />
+    <QuestsSorted Action="PulseAllInOne" NameClass="TamingtheBeas3" />
+    <QuestsSorted Action="RunLuaCode" NameClass="PetDismiss()" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.Wow.Helpers.CustomClass.DisposeCustomClass();" />
+    <QuestsSorted Action="PulseAllInOne" NameClass="BeastTraining" />
+    <QuestsSorted Action="RunLuaCode" NameClass="PetDismiss()" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="If" NameClass="(!(ObjectManager.Pet.IsValid)) &amp;&amp; (!(ObjectManager.Pet.IsAlive))" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.Wow.Helpers.CustomClass.DisposeCustomClass();" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.Wow.Bot.Tasks.GoToTask.ToPosition(new Vector3(9392.618, -7277.438, 14.24102));" />
+    <QuestsSorted Action="RunLuaCode" NameClass="DEFAULT_CHAT_FRAME:AddMessage(&quot;Current Profile: Time to tame your first Mistbat Slave.&quot;)" />
+    <QuestsSorted Action="Pulse" NameClass="TamingyourfirstPet" />
+    <QuestsSorted Action="RunLuaCode" NameClass="DEFAULT_CHAT_FRAME:AddMessage(&quot;Gratulation - You got your first slave.&quot;)" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.Wow.Helpers.CustomClass.LoadCustomClass();" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="RunLuaCode" NameClass="DEFAULT_CHAT_FRAME:AddMessage(&quot;Current Profile: Now you can order your Slave.&quot;)" />
+    <QuestsSorted Action="If" NameClass="(!wManager.Wow.Helpers.SpellManager.KnowSpell(982))" />
+    <QuestsSorted Action="GoToStep" NameClass="Start" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="LoadProfile" NameClass="Wholesome Grinder\Horde grinder 1-80.xml" />
+  </QuestsSorted>
+  <NpcQuest>
+    <NPCQuest Id="16271" Name="Telenus" GameObject="false">
+      <PickUpQuests>
+        <int>9617</int>
+      </PickUpQuests>
+      <TurnInQuests />
+      <Position X="9534.17" Y="-6851.21" Z="16.4943" />
+    </NPCQuest>
+    <NPCQuest Id="15399" Name="Lieutenant Dawnrunner" GameObject="false">
+      <PickUpQuests>
+        <int>9484</int>
+        <int>9485</int>
+        <int>9486</int>
+        <int>9673</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>9617</int>
+        <int>9484</int>
+        <int>9485</int>
+        <int>9486</int>
+      </TurnInQuests>
+      <Position X="8980.84" Y="-7458.36" Z="86.68853" />
+    </NPCQuest>
+    <NPCQuest Id="16675" Name="Halthenis" GameObject="false">
+      <PickUpQuests />
+      <TurnInQuests>
+        <int>9673</int>
+      </TurnInQuests>
+      <Position X="9926.74" Y="-7396.38" Z="13.63691" />
+    </NPCQuest>
+  </NpcQuest>
+  <Npc />
+  <EasyQuests>
+    <EasyQuest>
+      <Name>Taming the Beas</Name>
+      <QuestId>
+        <int>9484</int>
+      </QuestId>
+      <QuestType>UseItemOn</QuestType>
+      <QuestClass xsi:type="UseItemOnEasyQuestClass">
+        <HotSpots>
+          <Vector3 X="9083.813" Y="-7535.213" Z="95.3708" />
+          <Vector3 X="9080.177" Y="-7609.186" Z="116.2712" />
+          <Vector3 X="8998.207" Y="-7652.174" Z="139.2219" />
+        </HotSpots>
+        <EntryIdTarget>
+          <int>15650</int>
+        </EntryIdTarget>
+        <ItemId>23697</ItemId>
+        <Range>10</Range>
+      </QuestClass>
+      <ObjectiveCount1>0</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>true</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition>return Quest.IsObjectiveComplete(1, 9484);</IsCompleteCondition>
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+    <EasyQuest>
+      <Name>Taming the Beas2</Name>
+      <QuestId>
+        <int>9486</int>
+      </QuestId>
+      <QuestType>UseItemOn</QuestType>
+      <QuestClass xsi:type="UseItemOnEasyQuestClass">
+        <HotSpots>
+          <Vector3 X="8905.949" Y="-7583.561" Z="117.2128" />
+          <Vector3 X="8933.914" Y="-7645.205" Z="135.4276" />
+          <Vector3 X="8823.354" Y="-7816.159" Z="174.3973" />
+          <Vector3 X="8915.857" Y="-7474.672" Z="91.45934" />
+        </HotSpots>
+        <EntryIdTarget>
+          <int>15652</int>
+        </EntryIdTarget>
+        <ItemId>23702</ItemId>
+        <Range>10</Range>
+      </QuestClass>
+      <ObjectiveCount1>0</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>true</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition>return Quest.IsObjectiveComplete(1, 9486);</IsCompleteCondition>
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+    <EasyQuest>
+      <Name>Taming the Beas 3</Name>
+      <QuestId>
+        <int>9485</int>
+      </QuestId>
+      <QuestType>UseItemOn</QuestType>
+      <QuestClass xsi:type="UseItemOnEasyQuestClass">
+        <HotSpots>
+          <Vector3 X="8000.925" Y="-6815.037" Z="51.09774" Type="Swimming" />
+          <Vector3 X="7957.146" Y="-6838.342" Z="58.17005" />
+          <Vector3 X="7908.273" Y="-6901.654" Z="67.6671" />
+          <Vector3 X="7920.319" Y="-6981.458" Z="83.61131" />
+        </HotSpots>
+        <EntryIdTarget>
+          <int>16353</int>
+        </EntryIdTarget>
+        <ItemId>23703</ItemId>
+        <Range>10</Range>
+      </QuestClass>
+      <ObjectiveCount1>0</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>true</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition>return Quest.IsObjectiveComplete(1, 9485);</IsCompleteCondition>
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+    <EasyQuest>
+      <Name>Beast Training</Name>
+      <QuestId>
+        <int>9673</int>
+      </QuestId>
+      <QuestType>None</QuestType>
+      <QuestClass />
+      <ObjectiveCount1>0</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>false</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition />
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+    <EasyQuest>
+      <Name>Taming your first Pet</Name>
+      <QuestId />
+      <QuestType>UseSpellOn</QuestType>
+      <QuestClass xsi:type="UseSpellOnEasyQuestClass">
+        <HotSpots>
+          <Vector3 X="7961.718" Y="-6836.7" Z="57.49966" />
+        </HotSpots>
+        <EntryIdTarget>
+          <int>16353</int>
+        </EntryIdTarget>
+        <SpellId>1515</SpellId>
+        <Range>8.5</Range>
+      </QuestClass>
+      <ObjectiveCount1>0</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>true</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition>return (ObjectManager.Pet.IsAlive);</IsCompleteCondition>
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>true</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+    <EasyQuest>
+      <Name>The Hunters Path</Name>
+      <QuestId>
+        <int>9617</int>
+      </QuestId>
+      <QuestType>None</QuestType>
+      <QuestClass />
+      <ObjectiveCount1>0</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>false</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition />
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+  </EasyQuests>
+  <Script>public class ProfileRestarter
+    {
+        private static bool _IsAfk = false;
+        private static Vector3 afkPosition = (Vector3)null;
+        private static int timer = 0;
+        private static bool _isSubscribed = false;
+        private static void WatchForEvents()
+        {
+            if (!_isSubscribed)
+            {
+                _isSubscribed = true;
+
+                EventsLuaWithArgs.OnEventsLuaWithArgs += (LuaEventsId id, List&lt;string&gt; args) =&gt;
+                {
+                    if (id == wManager.Wow.Enums.LuaEventsId.CHAT_MSG_SYSTEM &amp;&amp; Conditions.ProductIsStartedNotInPause)
+                    {
+
+                        if (args.FirstOrDefault().Contains("You are now AFK"))
+                        {
+                            _IsAfk = true;
+                            timer = 0;
+                            afkPosition = ObjectManager.Me.Position;
+                        }
+                    }
+                };
+            }
+        }
+
+        public static void StartProfileRestarter()
+        {
+
+            Thread ProfileRestarterThread = new Thread(() =&gt;
+            {
+                Logging.Write("[Restarter]: Profile Restarter initialized");
+
+                string profileName = "Project X\\Orc Hunter.xml";
+                string currentProfileName = wManager.Wow.Helpers.Quest.QuesterCurrentContext.ProfileName;
+
+
+                while ((wManager.Wow.Helpers.Quest.QuesterCurrentContext.ProfileName.Equals(profileName) || !ObjectManager.Me.GetMove) &amp;&amp; Conditions.ProductIsStarted)
+                {
+                    Thread.Sleep(1000);
+                }
+
+                if (!_isSubscribed)
+                {
+                    Thread.Sleep(Usefuls.Latency + 500);
+                    WatchForEvents();
+                }
+
+                while (Conditions.ProductIsStarted || Conditions.ProductInPause)
+                {
+
+                    if (wManager.Wow.Helpers.Quest.QuesterCurrentContext.ProfileName.Equals(profileName))
+                        break;
+
+                    while (_IsAfk &amp;&amp; timer &lt; 600 &amp;&amp; !wManager.Wow.Helpers.Quest.QuesterCurrentContext.ProfileName.Equals(profileName))
+                    {
+                        Thread.Sleep(1000);
+                        timer++;
+                    }
+
+                    if (_IsAfk &amp;&amp; timer &gt;= 600 &amp;&amp; ObjectManager.Me.Position.DistanceTo(afkPosition) &lt; 25)
+                    {
+                        Logging.Write("[Restarter]: Bot seems to have stopped / went AFK for too long. Restart of profile in process...");
+                        wManager.Wow.Helpers.Quest.QuesterCurrentContext.ProfileName = profileName;
+                        robotManager.Products.Products.ProductRestart();
+                        break;
+                    }
+
+                    timer = 0;
+                    _IsAfk = false;
+                    Thread.Sleep(10000);
+                }
+
+                Logging.Write("[Restarter]: Profile Restarter disposed");
+
+            });
+
+            ProfileRestarterThread.Start();
+        }
+    }</Script>
+  <OffMeshConnections />
+  <BlacklistNpc />
+  <BlacklistNpcType />
+  <Blackspots />
+</EasyQuestProfile>

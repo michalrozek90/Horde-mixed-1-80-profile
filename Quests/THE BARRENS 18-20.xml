@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EasyQuestProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <QuestsSorted>
+    <QuestsSorted Action="PulseAllInOne" NameClass="TheZhevra" />
+    <QuestsSorted Action="PickUp" NameClass="TheStagnantOasis" />
+    <QuestsSorted Action="PickUp" NameClass="ProwlersoftheBarrens" />
+    <QuestsSorted Action="PickUp" NameClass="LostinBattle" />
+    <QuestsSorted Action="Pulse" NameClass="TheStagnantOasis" />
+    <QuestsSorted Action="Pulse" NameClass="ProwlersoftheBarrens" />
+    <QuestsSorted Action="Pulse" NameClass="LostinBattle" />
+    <QuestsSorted Action="TurnIn" NameClass="TheStagnantOasis" />
+    <QuestsSorted Action="TurnIn" NameClass="LostinBattle" />
+    <QuestsSorted Action="TurnIn" NameClass="ProwlersoftheBarrens" />
+    <QuestsSorted Action="RunLuaCode" NameClass="for i=1,GetNumQuestLogEntries() do&#xD;&#xA; SelectQuestLogEntry(i);&#xD;&#xA; SetAbandonQuest();&#xD;&#xA; AbandonQuest();&#xD;&#xA;end" />
+    <QuestsSorted Action="LoadProfile" NameClass="Wholesome Mixed\Horde mixed 1-80.xml" />
+  </QuestsSorted>
+  <NpcQuest>
+    <NPCQuest Id="3390" Name="Apothecary Helbrim" GameObject="false">
+      <PickUpQuests>
+        <int>848</int>
+        <int>1492</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>848</int>
+      </TurnInQuests>
+      <Position X="-424.542" Y="-2589.88" Z="95.81635" />
+    </NPCQuest>
+    <NPCQuest Id="3449" Name="Darsok Swiftdagger" GameObject="false">
+      <PickUpQuests>
+        <int>867</int>
+        <int>875</int>
+        <int>876</int>
+        <int>1060</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>867</int>
+        <int>875</int>
+        <int>876</int>
+      </TurnInQuests>
+      <Position X="-474.894" Y="-2607.74" Z="127.7994" />
+    </NPCQuest>
+    <NPCQuest Id="3615" Name="Devrak" GameObject="false">
+      <PickUpQuests>
+        <int>6384</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>6365</int>
+      </TurnInQuests>
+      <Position X="-437.137" Y="-2596" Z="95.78771" />
+    </NPCQuest>
+    <NPCQuest Id="3310" Name="Doras" GameObject="false">
+      <PickUpQuests>
+        <int>6386</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>6385</int>
+      </TurnInQuests>
+      <Position X="1676.25" Y="-4313.45" Z="61.7176" />
+    </NPCQuest>
+    <NPCQuest Id="3391" Name="Gazlowe" GameObject="false">
+      <PickUpQuests>
+        <int>887</int>
+        <int>890</int>
+        <int>888</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>895</int>
+        <int>887</int>
+        <int>892</int>
+        <int>888</int>
+      </TurnInQuests>
+      <Position X="-835.563" Y="-3728.66" Z="26.29175" />
+    </NPCQuest>
+    <NPCQuest Id="3464" Name="Gazrog" GameObject="false">
+      <PickUpQuests>
+        <int>869</int>
+        <int>3281</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>869</int>
+        <int>3281</int>
+      </TurnInQuests>
+      <Position X="-435.952" Y="-2639.21" Z="96.27585" />
+    </NPCQuest>
+    <NPCQuest Id="6929" Name="Innkeeper Gryshka" GameObject="false">
+      <PickUpQuests>
+        <int>6385</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>6384</int>
+      </TurnInQuests>
+      <Position X="1633.99" Y="-4439.37" Z="15.5167" />
+    </NPCQuest>
+    <NPCQuest Id="3387" Name="Jorn Skyseer" GameObject="false">
+      <PickUpQuests>
+        <int>1130</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>3261</int>
+      </TurnInQuests>
+      <Position X="-2382.81" Y="-1922.69" Z="95.78305" />
+    </NPCQuest>
+    <NPCQuest Id="8582" Name="Kadrak" GameObject="false">
+      <PickUpQuests />
+      <TurnInQuests>
+        <int>6541</int>
+      </TurnInQuests>
+      <Position X="1246.34" Y="-2253.31" Z="108.2893" />
+    </NPCQuest>
+    <NPCQuest Id="3337" Name="Kargal Battlescar" GameObject="false">
+      <PickUpQuests>
+        <int>842</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>840</int>
+      </TurnInQuests>
+      <Position X="303.432" Y="-3686.16" Z="27.06702" />
+    </NPCQuest>
+    <NPCQuest Id="3432" Name="Mankrik" GameObject="false">
+      <PickUpQuests>
+        <int>899</int>
+        <int>4921</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>899</int>
+        <int>4921</int>
+      </TurnInQuests>
+      <Position X="-520.983" Y="-2641.41" Z="95.78769" />
+    </NPCQuest>
+    <NPCQuest Id="3446" Name="Mebok Mizzyrix" GameObject="false">
+      <PickUpQuests>
+        <int>865</int>
+        <int>1069</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>865</int>
+        <int>1069</int>
+      </TurnInQuests>
+      <Position X="-928.982" Y="-3697.23" Z="7.987899" />
+    </NPCQuest>
+    <NPCQuest Id="3441" Name="Melor Stonehoof" GameObject="false">
+      <PickUpQuests />
+      <TurnInQuests>
+        <int>1130</int>
+      </TurnInQuests>
+      <Position X="-1413.06" Y="-125.633" Z="158.9349" />
+    </NPCQuest>
+    <NPCQuest Id="3389" Name="Regthar Deathgate" GameObject="false">
+      <PickUpQuests>
+        <int>850</int>
+        <int>855</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>850</int>
+        <int>855</int>
+      </TurnInQuests>
+      <Position X="-307.136" Y="-1971.95" Z="96.39681" />
+    </NPCQuest>
+    <NPCQuest Id="3338" Name="Sergra Darkthorn" GameObject="false">
+      <PickUpQuests>
+        <int>844</int>
+        <int>845</int>
+        <int>903</int>
+        <int>3261</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>844</int>
+        <int>845</int>
+        <int>903</int>
+        <int>842</int>
+      </TurnInQuests>
+      <Position X="-482.475" Y="-2670.19" Z="97.34957" />
+    </NPCQuest>
+    <NPCQuest Id="3442" Name="Sputtervalve" GameObject="false">
+      <PickUpQuests>
+        <int>1483</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>902</int>
+      </TurnInQuests>
+      <Position X="-902.036" Y="-3759.4" Z="11.46704" />
+    </NPCQuest>
+    <NPCQuest Id="3336" Name="Takrin Pathseeker" GameObject="false">
+      <PickUpQuests>
+        <int>840</int>
+      </PickUpQuests>
+      <TurnInQuests />
+      <Position X="271.805" Y="-4650.83" Z="11.70654" />
+    </NPCQuest>
+    <NPCQuest Id="3429" Name="Thork" GameObject="false">
+      <PickUpQuests>
+        <int>871</int>
+        <int>5041</int>
+        <int>6541</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>5041</int>
+        <int>906</int>
+        <int>871</int>
+      </TurnInQuests>
+      <Position X="-473.202" Y="-2595.7" Z="103.7229" />
+    </NPCQuest>
+    <NPCQuest Id="3448" Name="Tonga Runetotem" GameObject="false">
+      <PickUpQuests>
+        <int>870</int>
+        <int>877</int>
+        <int>880</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>870</int>
+        <int>877</int>
+        <int>880</int>
+      </TurnInQuests>
+      <Position X="-544.992" Y="-2672.77" Z="95.78821" />
+    </NPCQuest>
+    <NPCQuest Id="5810" Name="Uzzek" GameObject="false">
+      <PickUpQuests>
+        <int>1498</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>1498</int>
+      </TurnInQuests>
+      <Position X="185.746" Y="-3597.21" Z="27.18482" />
+    </NPCQuest>
+    <NPCQuest Id="3972" Name="WANTED" GameObject="true">
+      <PickUpQuests>
+        <int>895</int>
+      </PickUpQuests>
+      <TurnInQuests />
+      <Position X="-918.821" Y="-3719.89" Z="10.3143" />
+    </NPCQuest>
+    <NPCQuest Id="3453" Name="Wharfmaster Dizzywig" GameObject="false">
+      <PickUpQuests>
+        <int>896</int>
+        <int>892</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>1492</int>
+        <int>890</int>
+        <int>896</int>
+      </TurnInQuests>
+      <Position X="-985.599" Y="-3796.71" Z="5.126652" />
+    </NPCQuest>
+    <NPCQuest Id="3995" Name="Witch Doctor Jin'Zil" GameObject="false">
+      <PickUpQuests />
+      <TurnInQuests>
+        <int>1060</int>
+      </TurnInQuests>
+      <Position X="-272.48" Y="-394.084" Z="17.1958" />
+    </NPCQuest>
+    <NPCQuest Id="3489" Name="Zargh" GameObject="false">
+      <PickUpQuests>
+        <int>6365</int>
+      </PickUpQuests>
+      <TurnInQuests>
+        <int>6386</int>
+      </TurnInQuests>
+      <Position X="-403.68" Y="-2709.34" Z="97.53802" />
+    </NPCQuest>
+    <NPCQuest Id="4201" Name="Ziz Fizziks" GameObject="false">
+      <PickUpQuests />
+      <TurnInQuests>
+        <int>1483</int>
+      </TurnInQuests>
+      <Position X="878.289" Y="365.192" Z="23.18014" />
+    </NPCQuest>
+  </NpcQuest>
+  <Npc>
+    <Npc>
+      <Position X="-451.129" Y="-2684.29" Z="95.61527" Type="Flying" />
+      <Entry>3480</Entry>
+      <Name>Moorane Hearthgrain</Name>
+      <GossipOption>-1</GossipOption>
+      <Active>true</Active>
+      <Faction>Neutral</Faction>
+      <Type>Vendor</Type>
+      <VendorItemClass>Food</VendorItemClass>
+      <ContinentId>Kalimdor</ContinentId>
+    </Npc>
+    <Npc>
+      <Position X="-555.578" Y="-2965.65" Z="91.66906" Type="Flying" />
+      <Entry>8307</Entry>
+      <Name>Tarban Hearthgrain</Name>
+      <GossipOption>-1</GossipOption>
+      <Active>true</Active>
+      <Faction>Neutral</Faction>
+      <Type>Vendor</Type>
+      <VendorItemClass>Food</VendorItemClass>
+      <ContinentId>Kalimdor</ContinentId>
+    </Npc>
+    <Npc>
+      <Position X="1046.54" Y="-2104.31" Z="122.9816" Type="Flying" />
+      <Entry>14754</Entry>
+      <Name>Kelm Hargunth</Name>
+      <GossipOption>-1</GossipOption>
+      <Active>true</Active>
+      <Faction>Neutral</Faction>
+      <Type>Vendor</Type>
+      <VendorItemClass>Food</VendorItemClass>
+      <ContinentId>Kalimdor</ContinentId>
+    </Npc>
+    <Npc>
+      <Position X="-550.864" Y="-2673.2" Z="95.78779" Type="Flying" />
+      <Entry>3487</Entry>
+      <Name>Kalyimah Stormcloud</Name>
+      <GossipOption>-1</GossipOption>
+      <Active>true</Active>
+      <Faction>Neutral</Faction>
+      <Type>Vendor</Type>
+      <VendorItemClass>Food</VendorItemClass>
+      <ContinentId>Kalimdor</ContinentId>
+    </Npc>
+    <Npc>
+      <Position X="-539.841" Y="-2672.23" Z="95.78797" Type="Flying" />
+      <Entry>3486</Entry>
+      <Name>Halija Whitestrider</Name>
+      <GossipOption>-1</GossipOption>
+      <Active>true</Active>
+      <Faction>Neutral</Faction>
+      <Type>Repair</Type>
+      <VendorItemClass>Food</VendorItemClass>
+      <ContinentId>Kalimdor</ContinentId>
+    </Npc>
+    <Npc>
+      <Position X="-451.129" Y="-2684.29" Z="95.61539" Type="Flying" />
+      <Entry>3480</Entry>
+      <Name>Moorane Hearthgrain</Name>
+      <GossipOption>-1</GossipOption>
+      <Active>true</Active>
+      <Faction>Neutral</Faction>
+      <Type>Vendor</Type>
+      <VendorItemClass>Food</VendorItemClass>
+      <ContinentId>Kalimdor</ContinentId>
+    </Npc>
+    <Npc>
+      <Position X="-919.616" Y="-3683.76" Z="8.156413" Type="Flying" />
+      <Entry>3491</Entry>
+      <Name>Ironzar</Name>
+      <GossipOption>-1</GossipOption>
+      <Active>true</Active>
+      <Faction>Neutral</Faction>
+      <Type>Repair</Type>
+      <VendorItemClass>Food</VendorItemClass>
+      <ContinentId>Kalimdor</ContinentId>
+    </Npc>
+    <Npc>
+      <Position X="-982.713" Y="-3680.53" Z="9.555221" Type="Flying" />
+      <Entry>3493</Entry>
+      <Name>Grazlix</Name>
+      <GossipOption>-1</GossipOption>
+      <Active>true</Active>
+      <Faction>Neutral</Faction>
+      <Type>Repair</Type>
+      <VendorItemClass>Food</VendorItemClass>
+      <ContinentId>Kalimdor</ContinentId>
+    </Npc>
+    <Npc>
+      <Position X="-974.165" Y="-3635" Z="19.02279" Type="Flying" />
+      <Entry>3658</Entry>
+      <Name>Lizzarik</Name>
+      <GossipOption>-1</GossipOption>
+      <Active>true</Active>
+      <Faction>Neutral</Faction>
+      <Type>Vendor</Type>
+      <VendorItemClass>Food</VendorItemClass>
+      <ContinentId>Kalimdor</ContinentId>
+    </Npc>
+  </Npc>
+  <EasyQuests>
+    <EasyQuest>
+      <Name>The Zhevra</Name>
+      <QuestId>
+        <int>845</int>
+      </QuestId>
+      <QuestType>KillAndLoot</QuestType>
+      <QuestClass xsi:type="KillAndLootEasyQuestClass">
+        <HotSpots>
+          <Vector3 X="-694.1154" Y="-2525.743" Z="93.96207" />
+          <Vector3 X="-800.0224" Y="-2509.708" Z="92.96204" />
+          <Vector3 X="-842.5883" Y="-2463.969" Z="92.54078" />
+          <Vector3 X="-852.3199" Y="-2415.325" Z="91.72984" />
+          <Vector3 X="-846.8232" Y="-2375.901" Z="91.72434" />
+          <Vector3 X="-905.6251" Y="-2382.95" Z="94.11161" />
+          <Vector3 X="-924.6784" Y="-2339.197" Z="94.18152" />
+          <Vector3 X="-951.496" Y="-2442.406" Z="95.13587" />
+          <Vector3 X="-877.7604" Y="-2281.071" Z="91.88552" />
+        </HotSpots>
+        <EntryTarget>
+          <int>3242</int>
+        </EntryTarget>
+        <IsGrinderNotQuest>false</IsGrinderNotQuest>
+        <IsHotspots>true</IsHotspots>
+      </QuestClass>
+      <ObjectiveCount1>4</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>true</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition>return Quest.IsObjectiveComplete(1, 845);</IsCompleteCondition>
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+    <EasyQuest>
+      <Name>Lost in Battle</Name>
+      <QuestId>
+        <int>4921</int>
+      </QuestId>
+      <QuestType>InteractWithNpc</QuestType>
+      <QuestClass xsi:type="InteractWithNpcEasyQuestClass">
+        <HotSpots>
+          <Vector3 X="-1787.19" Y="-2375.77" Z="91.68487" />
+        </HotSpots>
+        <GossipOptionNpcInteractWith>1</GossipOptionNpcInteractWith>
+        <Macro>RunMacroText("/script SelectGossipOption(1) ")</Macro>
+        <IgnoreIfDead>true</IgnoreIfDead>
+        <EntryIdTarget>
+          <int>10668</int>
+        </EntryIdTarget>
+        <Range>4.5</Range>
+      </QuestClass>
+      <ObjectiveCount1>0</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>true</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition>return Quest.IsObjectiveComplete(1, 4921);</IsCompleteCondition>
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+    <EasyQuest>
+      <Name>Prowlers of the Barrens</Name>
+      <QuestId>
+        <int>903</int>
+      </QuestId>
+      <QuestType>KillAndLoot</QuestType>
+      <QuestClass xsi:type="KillAndLootEasyQuestClass">
+        <HotSpots>
+          <Vector3 X="26.47294" Y="-1634.359" Z="91.68394" />
+          <Vector3 X="41.0318" Y="-1605.1" Z="91.66682" />
+          <Vector3 X="-24.00117" Y="-1576.736" Z="91.67968" />
+          <Vector3 X="-30.4689" Y="-1560.02" Z="92.04967" />
+          <Vector3 X="67.9893" Y="-1508.81" Z="91.68548" />
+          <Vector3 X="92.1645" Y="-1491.53" Z="91.66678" />
+          <Vector3 X="139.278" Y="-1523.24" Z="91.66694" />
+          <Vector3 X="164.9483" Y="-1525.266" Z="91.66592" />
+          <Vector3 X="191.573" Y="-1535.1" Z="91.66677" />
+          <Vector3 X="207.82" Y="-1544.65" Z="91.66686" />
+          <Vector3 X="206.3714" Y="-1520.153" Z="92.32255" />
+          <Vector3 X="196.7516" Y="-1498.28" Z="91.66801" />
+        </HotSpots>
+        <EntryTarget>
+          <int>3425</int>
+        </EntryTarget>
+        <IsGrinderNotQuest>false</IsGrinderNotQuest>
+        <IsHotspots>true</IsHotspots>
+      </QuestClass>
+      <ObjectiveCount1>7</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>true</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition>return Quest.IsObjectiveComplete(1, 903);</IsCompleteCondition>
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+    <EasyQuest>
+      <Name>The Stagnant Oasis</Name>
+      <QuestId>
+        <int>877</int>
+      </QuestId>
+      <QuestType>Gatherer</QuestType>
+      <QuestClass xsi:type="GathererEasyQuestClass">
+        <HotSpots>
+          <Vector3 X="-1273.166" Y="-3010.405" Z="71.27459" Type="Swimming" />
+        </HotSpots>
+        <EntryIdObjects>
+          <int>3737</int>
+        </EntryIdObjects>
+        <IsHotspots>true</IsHotspots>
+      </QuestClass>
+      <ObjectiveCount1>1</ObjectiveCount1>
+      <ObjectiveCount2>0</ObjectiveCount2>
+      <ObjectiveCount3>0</ObjectiveCount3>
+      <ObjectiveCount4>0</ObjectiveCount4>
+      <ObjectiveCount5>0</ObjectiveCount5>
+      <AutoDetectObjectiveCount1>true</AutoDetectObjectiveCount1>
+      <AutoDetectObjectiveCount2>false</AutoDetectObjectiveCount2>
+      <AutoDetectObjectiveCount3>false</AutoDetectObjectiveCount3>
+      <AutoDetectObjectiveCount4>false</AutoDetectObjectiveCount4>
+      <AutoDetectObjectiveCount5>false</AutoDetectObjectiveCount5>
+      <CanCondition />
+      <IsCompleteCondition>return Quest.IsObjectiveComplete(1, 877);</IsCompleteCondition>
+      <RepeatableQuest>false</RepeatableQuest>
+      <NotRequiredInQuestLog>false</NotRequiredInQuestLog>
+      <PickUpQuestOnItem>false</PickUpQuestOnItem>
+      <PickUpQuestOnItemID>0</PickUpQuestOnItemID>
+      <Comment />
+      <GossipOptionRewardItem>1</GossipOptionRewardItem>
+      <RequiredQuest>0</RequiredQuest>
+      <MaxLevel>100</MaxLevel>
+      <MinLevel>0</MinLevel>
+      <WoWClass>None</WoWClass>
+    </EasyQuest>
+  </EasyQuests>
+  <Script />
+  <OffMeshConnections />
+  <BlacklistNpc />
+  <BlacklistNpcType />
+  <Blackspots>
+    <Blackspot X="-2248.43359" Y="-2370.82153" Z="91.66712" Radius="60" Continent="Kalimdor" TypeArea="POLYAREA_BIGDANGER" Comment="The Barrens &gt; Southern Barrens" />
+  </Blackspots>
+</EasyQuestProfile>

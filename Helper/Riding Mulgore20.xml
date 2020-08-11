@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EasyQuestProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <QuestsSorted>
+    <QuestsSorted Action="StepName" NameClass="Start" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;" />
+    <QuestsSorted Action="RunLuaCode" NameClass="print(&quot;\124cffffcc00\124h[GrinderSuite]\124h\124r: \124cff00ccff\124hGoing to mulgore and learn riding skill\124h\124r&quot;)" />
+    <QuestsSorted Action="While" NameClass="!wManager.Wow.Helpers.Skill.Has(wManager.Wow.Enums﻿.SkillLine.Riding) &amp;&amp; Lua.LuaDoString&lt;int&gt;(&quot;return GetMoney()&quot;) &gt;= 50000" />
+    <QuestsSorted Action="RunCode" NameClass="        if (wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new robotManager.Helpful.Vector3(-2275.65, -399.941, -9.404253), 3690)) &#xD;&#xA;        { &#xD;&#xA;            wManager.Wow.Helpers.Usefuls.SelectGossipOption(wManager.Wow.Enums.GossipOptionsType.trainer);&#xD;&#xA;            wManager.Wow.Helpers.Trainer.TrainingSpell();&#xD;&#xA;        }" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="If" NameClass="wManager.Wow.Helpers.SpellManager.KnowSpell(18989)" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.wManagerSetting.CurrentSetting.GroundMountName = &quot;Gray Kodo&quot;;" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.Wow.Forms.UserControlTabGeneralSettings.ReloadGeneralSettings();" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="While" NameClass="wManager.Wow.Helpers.ItemsManager.GetItemCountById(15277) == 0 &amp;&amp; !wManager.Wow.Helpers.SpellManager.KnowSpell(18989)" />
+    <QuestsSorted Action="RunCode" NameClass="if (wManager.wManagerSetting.CurrentSetting.GroundMountName == string.Empty)&#xD;&#xA; {&#xD;&#xA; wManager.Wow.Bot.Tasks.GoToTask.ToPositionAndIntecractWithNpc(new Vector3(-2279.8, -392.07, -9.396848), 3685, 1, false);&#xD;&#xA; System.Threading.Thread.Sleep(5000);&#xD;&#xA; wManager.Wow.Helpers.Vendor.BuyItem(&quot;Gray Kodo&quot;,1); // change Skinning Knife to what item you want. do not remove &quot;&quot;&#xD;&#xA; System.Threading.Thread.Sleep(5000); &#xD;&#xA; }&#xD;&#xA; &#xD;&#xA; &#xD;&#xA;" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="While" NameClass="wManager.wManagerSetting.CurrentSetting.GroundMountName == string.Empty" />
+    <QuestsSorted Action="RunCode" NameClass="if (ItemsManager.HasItemById(15277)) &#xD;&#xA; {&#xD;&#xA; ItemsManager.UseItem(15277);﻿&#xD;&#xA; System.Threading.Thread.Sleep(1000); &#xD;&#xA; }" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.wManagerSetting.CurrentSetting.GroundMountName = &quot;Gray Kodo&quot;;" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.Wow.Forms.UserControlTabGeneralSettings.ReloadGeneralSettings();" />
+    <QuestsSorted Action="EndWhile" NameClass="" />
+    <QuestsSorted Action="If" NameClass="wManager.wManagerSetting.CurrentSetting.GroundMountName == string.Empty || Skill.GetValue(SkillLine.Riding) &lt; 75" />
+    <QuestsSorted Action="GoToStep" NameClass="Start" />
+    <QuestsSorted Action="EndIf" NameClass="" />
+    <QuestsSorted Action="LoadProfile" NameClass="Wholesome Grinder\Horde grinder 1-80.xml" />
+  </QuestsSorted>
+  <NpcQuest />
+  <Npc />
+  <EasyQuests />
+  <Script>
+public class MyCustomScript
+{
+    static MyCustomScript()
+    {
+        // You can put here code to run when bot start, you can also add methods and classes.
+    }
+}
+</Script>
+  <OffMeshConnections />
+  <BlacklistNpc />
+  <BlacklistNpcType />
+  <Blackspots />
+</EasyQuestProfile>
