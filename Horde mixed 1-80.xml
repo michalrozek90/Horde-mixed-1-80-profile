@@ -6355,11 +6355,10 @@ public class AutoUpdater
     {
         try
         {
-            string onlineFile = "https://raw.githubusercontent.com/TheSmokie/Death-Knight-Starting-Area-Remake/master/%230%20Launcher.xml";
-            Quester.Bot.QuesterSetting.Load();
-            string profileName = "#0 Launcher.xml";
+            string onlineFile = "https://raw.githubusercontent.com/michalrozek90/Horde-mixed-1-80-profile/master/Horde%20mixed%201-80.xml";
 
-            string currentFile = System.Windows.Forms.Application.StartupPath + @"\Profiles\Quester\\Death Knight Starting Area\" + profileName;
+            string currentFile = Others.GetCurrentDirectory + @"\Profiles\Quester\Wholesome Mixed" + wManager.Wow.Helpers.Quest.QuesterCurrentContext.ProfileName;
+            robotManager.Helpful.Logging.Write("Current profile is " + currentFile);
             var currentFileContent = System.IO.File.ReadAllText(currentFile, System.Text.Encoding.UTF8);
             var onlineFileContent = new System.Net.WebClient { Encoding = System.Text.Encoding.UTF8 }.DownloadString(onlineFile);
 
@@ -6367,15 +6366,12 @@ public class AutoUpdater
             {
                 if (currentFileContent != onlineFileContent) // if new update
                 {
-                    robotManager.Helpful.Logging.Write("New version found, try to update file", (Logging.LogType)1, System.Drawing.Color.Red);
+                    robotManager.Helpful.Logging.Write("New version found, try to update file", (Logging.LogType)1, System.Drawing.Color.Blue);
                     System.IO.File.WriteAllText(currentFile, onlineFileContent); // replace user file by online file
                     new System.Threading.Thread(() =&gt; robotManager.Products.Products.ProductRestart()).Start(); // reload product (profile)
-
-
                 }
-                Logging.Write("[Auto Updater]The version on your pc is the latest updated version.", (Logging.LogType)1, System.Drawing.Color.Red);
+                Logging.Write("[Auto Updater]The version on your pc is the latest updated version.", (Logging.LogType)1, System.Drawing.Color.Blue);
             }
-
 
         }
         catch (System.Exception e)
